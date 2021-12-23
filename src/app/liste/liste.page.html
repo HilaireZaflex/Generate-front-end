@@ -37,7 +37,7 @@
 
     <ion-row>
       <ion-button color="warning">
-        <img class="img3" src="assets/export.png" alt="#" (click)="onClick()" style="margin-right: 150%;">
+        <img class="img3" src="assets/export.png" alt="#" (click)="exportToExcel()" style="margin-right: 150%;">
       </ion-button>
     </ion-row>
     </div>
@@ -51,7 +51,7 @@
             <ion-label >{{apprenant.nomComplet}}</ion-label>
             <ion-label >{{apprenant.email}}</ion-label>
             <ion-label class="un" >
-              <ion-img  src="assets/delete.png" routerLink='/affichage'></ion-img>
+              <ion-img  src="assets/delete.png" (click)="deleteApprenant(apprenant.id)"></ion-img>
               <ion-img  src="assets/edit.png" routerLink='/affichage'></ion-img>
             </ion-label>
           </ion-item>

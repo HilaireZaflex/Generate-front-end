@@ -21,7 +21,7 @@ export class ConnexionService {
 
   //Delete an apprenant
   deleteApprenant(idApp:any){
-    return this.http.delete(this.url+"/apprenant/supprimerApprenant/"+idApp);
+    return this.http.delete(`${this.url+"/apprenant/supprimerApprenant"}/${idApp}`);
   }
 
 }
